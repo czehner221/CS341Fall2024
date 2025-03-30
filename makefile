@@ -1,0 +1,14 @@
+GPA.exe: driver.o Student.o
+	g++ driver.o Student.o -o GPA.exe
+	
+driver.o: driver.cpp
+	g++ -c driver.cpp -o driver.o
+	
+Student.o: Student.cpp
+	g++ -c Student.cpp -o Student.o
+	
+clean:
+	rm -rf *.o GPA.exe
+	
+run:
+	GPA.exe
